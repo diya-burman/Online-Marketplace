@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Auction Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="script.js">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">AuctionSphere</h1>
+      <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#auctions">Live Auctions</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Discover Unique Auctions</h1>
+      <p>Bid on exclusive items and win them at unbeatable prices.</p>
+      <a href="#auctions" class="btn">Start Bidding</a>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section id="categories" class="categories">
+    <div class="container">
+      <h2>Shop by Category</h2>
+      <div class="category-list">
+        <div class="category">Art & Collectibles</div>
+        <div class="category">Electronics</div>
+        <div class="category">Luxury Goods</div>
+        <div class="category">Vehicles</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Auctions Section -->
+  <section id="auctions" class="auctions">
+    <div class="container">
+      <h2>Live Auctions</h2>
+      <div class="auction-list">
+        <!-- Auction Items -->
+        <div class="auction-item">
+          <h3>Vintage Painting</h3>
+          <p>Current Bid: $150</p>
+          <button class="bid-btn" onclick="placeBid('Vintage Painting', 150)">Place Bid</button>
+        </div>
+        <div class="auction-item">
+          <h3>Smartphone</h3>
+          <p>Current Bid: $400</p>
+          <button class="bid-btn" onclick="placeBid('Smartphone', 400)">Place Bid</button>
+        </div>
+        <div class="auction-item">
+          <h3>Sports Car</h3>
+          <p>Current Bid: $25,000</p>
+          <button class="bid-btn" onclick="placeBid('Sports Car', 25000)">Place Bid</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 AuctionSphere. All rights reserved.</p>
+      <p><a href="#contact">Contact Us</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
