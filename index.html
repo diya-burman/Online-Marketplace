@@ -3,77 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Auction Marketplace</title>
+  <title>Online Marketplace</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="script.js">
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">AuctionSphere</h1>
-      <nav class="navbar">
-        <a href="#">Home</a>
-        <a href="#categories">Categories</a>
-        <a href="#auctions">Live Auctions</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>Marketplace</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#auctions">Auctions</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#register">Register</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>Discover Unique Auctions</h1>
-      <p>Bid on exclusive items and win them at unbeatable prices.</p>
-      <a href="#auctions" class="btn">Start Bidding</a>
-    </div>
-  </section>
+  <main>
+    <section id="home" class="intro">
+      <h2>Welcome to Our Marketplace</h2>
+      <p>Browse products, bid in auctions, or list your items for sale!</p>
+    </section>
 
-  <!-- Categories Section -->
-  <section id="categories" class="categories">
-    <div class="container">
-      <h2>Shop by Category</h2>
-      <div class="category-list">
-        <div class="category">Art & Collectibles</div>
-        <div class="category">Electronics</div>
-        <div class="category">Luxury Goods</div>
-        <div class="category">Vehicles</div>
+    <section id="search">
+      <h3>Search Products</h3>
+      <input type="text" id="searchInput" placeholder="Search for products...">
+      <button id="searchButton">Search</button>
+    </section>
+
+    <section id="auctions">
+      <h3>Live Auctions</h3>
+      <div id="auctionList">
+        <!-- Auction items will be dynamically added here -->
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Live Auctions Section -->
-  <section id="auctions" class="auctions">
-    <div class="container">
-      <h2>Live Auctions</h2>
-      <div class="auction-list">
-        <!-- Auction Items -->
-        <div class="auction-item">
-          <h3>Vintage Painting</h3>
-          <p>Current Bid: $150</p>
-          <button class="bid-btn" onclick="placeBid('Vintage Painting', 150)">Place Bid</button>
+    <section id="products">
+      <h3>Featured Products</h3>
+      <div class="product-list">
+        <!-- Featured products -->
+        <div class="product-card">
+          <img src="product1.jpg" alt="Product 1">
+          <h4>Product 1</h4>
+          <p>$100</p>
+          <button class="buy-button">Buy Now</button>
         </div>
-        <div class="auction-item">
-          <h3>Smartphone</h3>
-          <p>Current Bid: $400</p>
-          <button class="bid-btn" onclick="placeBid('Smartphone', 400)">Place Bid</button>
-        </div>
-        <div class="auction-item">
-          <h3>Sports Car</h3>
-          <p>Current Bid: $25,000</p>
-          <button class="bid-btn" onclick="placeBid('Sports Car', 25000)">Place Bid</button>
+        <div class="product-card">
+          <img src="product2.jpg" alt="Product 2">
+          <h4>Product 2</h4>
+          <p>$150</p>
+          <button class="buy-button">Buy Now</button>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 AuctionSphere. All rights reserved.</p>
-      <p><a href="#contact">Contact Us</a></p>
-    </div>
+  <footer>
+    <p>&copy; 2024 Marketplace. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>

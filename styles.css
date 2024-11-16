@@ -1,90 +1,215 @@
-/* General Reset */
-body {
+/* Global Reset */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    padding: 0;
+    box-sizing: border-box;
   }
   
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
   }
   
-  .header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  header {
+    background-color: #2d2d2d;
+    color: white;
+    padding: 20px;
+  }
+  
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  .navbar a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1rem;
+  nav .logo h1 {
+    font-size: 30px;
+    font-weight: bold;
   }
   
-  .navbar a:hover {
-    text-decoration: underline;
+  nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
   }
   
-  .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    color: #fff;
+  nav .nav-links li a {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav .nav-links li a:hover {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  #home {
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 80px 20px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-bottom: 4px solid #f39c12;
   }
   
-  .hero .btn {
-    background: #ff6200;
-    color: #fff;
-    padding: 0.7rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
+  #home h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
   }
   
-  .categories, .auctions {
-    padding: 2rem 1rem;
-    background: #f4f4f4;
+  #home p {
+    font-size: 22px;
+    margin-bottom: 30px;
   }
   
-  .category-list, .auction-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-  
-  .category, .auction-item {
-    background: #fff;
-    padding: 1rem;
+  #search {
+    padding: 40px 20px;
     text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    background-color: #ffffff;
   }
   
-  .auction-item h3 {
-    margin-bottom: 0.5rem;
+  #search h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
   }
   
-  .bid-btn {
-    background: #007bff;
-    color: #fff;
-    padding: 0.5rem 1rem;
+  #search input {
+    padding: 12px 20px;
+    width: 50%;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  #search input:focus {
+    border-color: #f39c12;
+  }
+  
+  #search button {
+    padding: 12px 30px;
+    margin-left: 10px;
+    background-color: #f39c12;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
   }
   
-  .bid-btn:hover {
-    background: #0056b3;
+  #search button:hover {
+    background-color: #e67e22;
   }
   
-  .footer {
+  #auctions, #products {
+    padding: 50px 20px;
+    background-color: #ffffff;
     text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
+  }
+  
+  #auctions h3, #products h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  
+  .auction-card, .product-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .auction-card:hover, .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .auction-card img, .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .auction-card h4, .product-card h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .auction-card p, .product-card p {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 15px;
+  }
+  
+  .auction-card button, .product-card button {
+    padding: 12px 20px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auction-card button:hover, .product-card button:hover {
+    background-color: #e67e22;
+  }
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  footer {
+    background-color: #2d2d2d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    #home h2 {
+      font-size: 40px;
+    }
+  
+    #search input {
+      width: 80%;
+    }
+  
+    .product-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .auction-card, .product-card {
+      padding: 15px;
+    }
   }
   
