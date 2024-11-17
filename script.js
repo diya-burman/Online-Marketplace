@@ -1,12 +1,12 @@
 // Sample product and auction data
 const auctions = [
-    { name: 'Auction Item 1', currentBid: '$50', endTime: '2h 30m' },
-    { name: 'Auction Item 2', currentBid: '$75', endTime: '4h 10m' }
+    { name: 'Auction Item 1', currentBid: '₹50', endTime: '2h 30m' },
+    { name: 'Auction Item 2', currentBid: '₹75', endTime: '4h 10m' }
   ];
   
   const products = [
-    { name: 'Product 1', price: '100' },
-    { name: 'Product 2', price: '$150' }
+    { name: 'Product 1', price: '₹100' },
+    { name: 'Product 2', price: '₹150' }
   ];
   
   // Display Auctions

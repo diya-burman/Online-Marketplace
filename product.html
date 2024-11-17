@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <!-- Link to the CSS file -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="product.css">
+</head>
+<body>
+  <!-- Your HTML content -->
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>AuctionSphere</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#auctions">Auctions</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#register">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="products">
+    <h2>Products</h2>
+    <div id="filterAddProduct">
+      <h3>Filter Products</h3>
+      <select id="filterCategory">
+        <option value="all">All</option>
+        <option value="electronics">Electronics</option>
+        <option value="fashion">Fashion</option>
+        <option value="home">Home</option>
+        <option value="books">Books</option>
+      </select>
+
+      <h3>Add a New Product</h3>
+      <form id="addProductForm">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" required placeholder="Enter product name" />
+
+        <label for="productCategory">Category:</label>
+        <select id="productCategory">
+          <option value="electronics">Electronics</option>
+          <option value="fashion">Fashion</option>
+          <option value="home">Home</option>
+          <option value="books">Books</option>
+        </select>
+
+        <label for="productPrice">Price (₹):</label>
+        <input type="number" id="productPrice" required placeholder="Enter price" />
+
+        <button type="submit">Add Product</button>
+      </form>
+    </div>
+
+    <div id="productList"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Marketplace. All rights reserved.</p>
+  </footer>
+
+  <!-- Link to the JavaScript file -->
+  <script src="script.js"></script>
+  <script src=".js"></script>
+</body>
+</html>
